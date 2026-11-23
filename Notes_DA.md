@@ -8,8 +8,8 @@ Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
 - ROMS observation NetCDF files have length limitations on `obs_provenance` metadata. Exceeding these limits may cause DA runs to crash with unexpected errors, such as incorrect forcing-time interpolation.
     * Global attribute (< 2048 characters): In ROMS/Utility/def_mod.F, ROMS reads ds.attrs['obs_provenance'] into a fixed-length Fortran character array: character (len=2048) :: AttValue(2).
     * Variable attribute (< 1024 characters): In ROMS/Modules/mod_netcdf.F, ROMS reads ds['obs_provenance'].attrs['flag_meanings'] using character (len=1024) :: text, without checking whether the attribute exceeds the buffer length.
-* In my observation files, these two attributes contain the same provenance descriptions. The DA crash was traced to an overly long variable attribute (flag_meanings) through controlled tests.
-* Solution: Shorten the provenance names! 
+    * In my observation files, these two attributes contain the same provenance descriptions. The DA crash was traced to an overly long variable attribute (flag_meanings) through controlled tests.
+    * Solution: Shorten the provenance names! 
   
 
 #### create obs file from each data source
