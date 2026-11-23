@@ -1,11 +1,10 @@
 
 Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
 
-
 ## 1. Observation file
 - create a python env that has matlab enginee
-- `obs_depth` save negative depth in meter; `obs_Zgrid` = fractional z grid; DA will [update](https://www.myroms.org/projects/src/ticket/895) obs_Zgrid ; the fractional obs_Zgrid is required in super_obs.m, therefore, we can't use obs_Zgrid = 0
-- `obs_variance` is very likely not used in DA. I followed WC13 for completeness
+- `obs_depth` store the physical observation depth in meter (negative downward), while `obs_Zgrid` stores the fractional z grid. ROMS DA will [update](https://www.myroms.org/projects/src/ticket/895) obs_Zgrid internally. However, super_obs.m requires valid obs_Zgrid to vertically bin observations. Therefore, obs_Zgrid cannot be innitalized to zero if using super obs.
+- `obs_variance` is very likely not used in DA. I included it for completeness, following the WC13 example (wc13_obs.nc)
 - ROMS observation NetCDF files have length limitations on `obs_provenance` metadata. Exceeding these limits may cause DA runs to crash with unexpected errors, such as incorrect forcing-time interpolation.
     * Global attribute (< 2048 characters): In ROMS/Utility/def_mod.F, ROMS reads ds.attrs['obs_provenance'] into a fixed-length Fortran character array: character (len=2048) :: AttValue(2).
     * Variable attribute (< 1024 characters): In ROMS/Modules/mod_netcdf.F, ROMS reads ds['obs_provenance'].attrs['flag_meanings'] using character (len=1024) :: text, without checking whether the attribute exceeds the buffer length.
