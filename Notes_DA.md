@@ -13,7 +13,9 @@ Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
   
 
 #### create obs file from each data source
-#### Directory: /proj/ovsn/jxiong/DA/OBS_INPUT/
+
+##### Directory: /proj/ovsn/jxiong/DA/OBS_INPUT/
+
 - CrocoLake (reserve OleanderXBT and 20% argo profiles for 2023)
   - code:
   - innitial obs_error = provided value from crocoLake or 0.002 ˚C or 0.01 psu for missing values
