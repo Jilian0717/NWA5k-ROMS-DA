@@ -26,12 +26,14 @@ Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
   - assigned initial obs_error = 0.002 ˚C, 0.01 psu
 
 - SST
+  - link: https://coastwatch.noaa.gov/cwn/products/noaa-geo-polar-blended-global-sea-surface-temperature-analysis-level-4.html
   - data:
   - code:
   - assigned innitial obs_error = 1˚C
 
-- SLA 
-  - data:
+- SLA
+  - link: https://data.marine.copernicus.eu/product/SEALEVEL_GLO_PHY_L4_MY_008_047/description
+  - data: 
   - code:
   - ROMS 10-year (2014-2023) free run mean SSH, zeta_mean_2014_2024_0001_0118.nc
   - assigned initial obs_error = 6 cm
@@ -39,8 +41,9 @@ Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
     - directory: /proj/argon/jxiong/Grid_5km/NWA5k12_t1424_nesh3_hourly_zeta/
 
 - Oleander ADCP
-  - data:
-  - code
+  - link: https://currents.soest.hawaii.edu/oleander/flastik/index.html
+  - data: 
+  - code:
   - assigned initial obs_error = cm/s
   - notes: the downloaded ADCP u and v is 5-min frequency and has already passed QC but it worth a double check
 
