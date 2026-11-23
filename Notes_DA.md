@@ -6,7 +6,7 @@ Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
 - create a python env that has matlab enginee
 - obs_depth save negative depth in meter; obs_Zgrid = fractional z grid; DA will update obs_Zgrid [](https://www.myroms.org/projects/src/ticket/895); the fractional obs_Zgrid is required in super_obs.m, therefore, we can't use obs_Zgrid = 0
 - obs_variance is very likely not used in DA. I followed WC13 for completeness
-- the global obs_provenance attribute in ROMS observation NetCDF files should be shorter than 2048 bytes; otherwise DA run blew up with very strange error information. In ROMS/Utility/def_mod.F, ROMS reads this global attribute into a fixed-length Fortran character array: character (len=2048) :: AttValue(2). This restriction concerns the global attribute ds.attrs['obs_provenance'], probably not the variable attribute ds['obs_provenance'].attrs['flag_meanings']. ds.attrs['obs_provenance'] and ds['obs_provenance'].attrs['flag_meanings'] are the same.
+- the global obs_provenance attribute in ROMS observation NetCDF files should be shorter than 2048 bytes; otherwise DA run blew up with very strange error information. In ROMS/Utility/def_mod.F, ROMS reads this global attribute into a fixed-length Fortran character array: character (len=2048) :: AttValue(2). This restriction concerns the global attribute ds.attrs['obs_provenance'], probably not the variable attribute ds['obs_provenance'].attrs['flag_meanings']. ds.attrs['obs_provenance'] and ds['obs_provenance'].attrs['flag_meanings'] are the same in the observaiton files I prepared.
 
 #### create obs file from each data source
 - CrocoLake (reserve OleanderXBT and 20% argo profiles for 2023)
