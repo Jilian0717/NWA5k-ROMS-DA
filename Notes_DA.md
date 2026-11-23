@@ -75,15 +75,15 @@ https://github.com/myroms/roms/wiki/ROMS-4DVAR-Data-Assimilation#background-erro
 #### Steps:
 - run `01_calculate_rossby_radius.py`
 
-  Input file: `roms_avg_mean_TS_zeta_0001_0118.nc`. Mean temperature, salinity, and zeta based on roms_avg_0001.nc to roms_avg_0118.nc in `/proj/argon/jxiong/Grid_5km/NWA5k12_t1424_nesh3/`
+  * Input file: `roms_avg_mean_TS_zeta_0001_0118.nc`. Mean temperature, salinity, and zeta based on roms_avg_0001.nc to roms_avg_0118.nc in `/proj/argon/jxiong/Grid_5km/NWA5k12_t1424_nesh3/`
 
-  Output file: `rosbby_radius_10yr_mean.nc`
+  * Output file: `rosbby_radius_10yr_mean.nc`
 
 - run `02_create_deccorrelation_length_scale_double.py`
 
-  Inpute file: `rosbby_radius_10yr_mean.nc`
+  * Inpute file: `rosbby_radius_10yr_mean.nc`
 
-  Output file: `NWA5k_Bcorr_xy_double.nc`
+  * Output file: `NWA5k_Bcorr_xy_double.nc`
 
 
 ### Configure Normalization run:
