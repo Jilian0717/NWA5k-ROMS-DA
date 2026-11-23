@@ -94,25 +94,17 @@ https://github.com/myroms/roms/wiki/ROMS-4DVAR-Data-Assimilation#background-erro
 
     `c4dvar_NWA5k12.in` 
 
-    LdefNRM == T F F F F
-
-    LwrtNRM == T F F F F
-
-    CnormI(*) = T
-
-    Nmethod = 1 # approximated, faster than the "exact" method for large domain
-
-    VdecayI = 30 # vertical decorrelaiton length scale = 30m
-
-    SVCname = NWA5k_Bcorr_xy_double.nc
-
-    STDnameI, STDnameB, STDnameF: these files are not really used in Normalization run but the Normalization run requires them
-
-    NRMnameI: the output file name
-
+    * LdefNRM == T F F F F
+    * LwrtNRM == T F F F F
+    * CnormI(*) = T
+    * Nmethod = 1 # approximated, faster than the "exact" method for large domain
+    * VdecayI = 30 # vertical decorrelaiton length scale = 30m
+    * SVCname = NWA5k_Bcorr_xy_double.nc
+    * STDnameI, STDnameB, STDnameF: these files are not really used in Normalization run but the Normalization run requires them
+    * NRMnameI: the output file name
+      
     `roms_nes.in`
-
-    APARNAME = c4dvar_NWA5k12.in
+    * APARNAME = c4dvar_NWA5k12.in
 
 - Submit the job: sbatch run.sh
 
