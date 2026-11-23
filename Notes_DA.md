@@ -152,6 +152,8 @@ https://github.com/myroms/roms/wiki/ROMS-4DVAR-Data-Assimilation#background-erro
    - NRMnameM and NRMnameI # normalization file
 
 - run_blank.sh
+   - set node configuration and jobname
+     
 - ocean_ini_20230101_add_vars.nc
     
     - Initial file used for the 1st DA window
