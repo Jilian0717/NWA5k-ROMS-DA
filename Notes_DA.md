@@ -48,10 +48,13 @@ Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
   - notes: the tested ADCP u and v for 2023.09-12 is 5-min frequency and has already passed QC but it worth a double check
 
 #### Merge observation
+  - run d01_merge.py
 
 #### Create super obs
+  - run d02_create_super_obs.py
 
 #### adjust observation error
+   - run d03_modify_super_obs_error_tuneRV1.4.py
 
 
 
