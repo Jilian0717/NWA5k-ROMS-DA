@@ -17,7 +17,7 @@ Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
   - code:
   - innitial obs_error = provided value from crocoLake or 0.002 ˚C or 0.01 psu for missing values
 
-- Yu's TS profiles
+- non-CrocoLake TS profiles by Yu
   - code:
   - assigned initial obs_error = 0.002 ˚C, 0.01 psu
 
