@@ -135,7 +135,6 @@ https://github.com/myroms/roms/wiki/ROMS-4DVAR-Data-Assimilation#background-erro
 #### Directory: 
 `/proj/ovsn/jxiong/DA/RBL4DVAR/NOAA_CoastWatch_GEO_Polar_L4fndSST_20230101/crocV1.1_VL2_tuneBR_v1.4_Nouter1_Ninner20`
 
-#### Configure Normalization run:
 #### Input: 
 - Super observations
    - upload super observation files to './super_obs/'
