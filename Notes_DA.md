@@ -35,8 +35,8 @@ Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
   - code:
   - ROMS 10-year (2014-2023) free run mean SSH, zeta_mean_2014_2024_0001_0118.nc
   - assigned initial obs_error = 6 cm
-  - reconstructed tide:
-    - directory: 
+  - reconstructed tide using a free run that only saves hourly zeta
+    - directory: /proj/argon/jxiong/Grid_5km/NWA5k12_t1424_nesh3_hourly_zeta/
 
 - Oleander ADCP
   - data:
