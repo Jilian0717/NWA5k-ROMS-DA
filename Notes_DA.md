@@ -45,7 +45,7 @@ Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
   - data: 
   - code:
   - assigned initial obs_error = cm/s
-  - notes: the downloaded ADCP u and v is 5-min frequency and has already passed QC but it worth a double check
+  - notes: the tested ADCP u and v for 2023.09-12 is 5-min frequency and has already passed QC but it worth a double check
 
 #### Merge observation
 
