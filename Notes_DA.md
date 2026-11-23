@@ -47,15 +47,15 @@ Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
   - assigned initial obs_error = cm/s
   - notes: the tested ADCP u and v for 2023.09-12 is 5-min frequency and has already passed QC but it worth a double check
 
-#### Merge observation
-  - run d01_merge.py
+#### Merge observations
+  - run d01_merge.py to merge observations; will call the matlab function obs_merge
+  - set dt = 5min to merge obs within a 5-min time window
 
 #### Create super obs
-  - run d02_create_super_obs.py
+  - run d02_create_super_obs.py; will call the matlab function super_obs
 
 #### adjust observation error
    - run d03_modify_super_obs_error_tuneRV1.4.py
-
 
 
 ## 2. ROMS 4DVar Normalization Run
