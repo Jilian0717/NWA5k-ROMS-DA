@@ -14,6 +14,10 @@ Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
    * python -m pip install "matlabengine>=25.2,<25.3"
    * conda install --override-channels -c conda-forge numpy  # scipy pandas xarray netcdf4 h5netcdf matplotlib dask gsw
 
+- load matlab_engine quick way:
+   * create ~/activate_matlab_engine.sh
+   * add "alias mlab='source ~/activate_matlab_engine.sh" in ~/.bashrc
+
 - `obs_depth` store the physical observation depth in meter (negative downward), while `obs_Zgrid` stores the fractional z grid. ROMS DA will [update](https://www.myroms.org/projects/src/ticket/895) obs_Zgrid internally. However, super_obs.m requires valid obs_Zgrid to vertically bin observations. Therefore, obs_Zgrid cannot be innitalized to zero if using super obs.
 - `obs_variance` is very likely not used in DA. I included it for completeness, following the WC13 example (wc13_obs.nc)
 - ROMS observation NetCDF files have length limitations on `obs_provenance` metadata. Exceeding these limits may cause DA runs to crash with unexpected errors, such as incorrect forcing-time interpolation.
