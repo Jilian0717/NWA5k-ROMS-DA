@@ -3,7 +3,6 @@ Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
 
 ## 1. Observation file
 - create a python env that has matlab enginee
-    * on mac, I used miniforge3; then source ~/miniforge3/bin/activate matlab_engine
     * on hydra, create a matlab_engine virtual environment:
         * module purge
         * module load ohpc
