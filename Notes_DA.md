@@ -11,7 +11,6 @@ Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
         * source /apps/miniconda/25.9/etc/profile.d/conda.sh
         * conda create -p /user/jilian.xiong/.conda/envs/matlab_engine python=3.12 pip    --override-channels  -c conda-forge  -y
         * conda activate /user/jilian.xiong/.conda/envs/matlab_engine
-        * module load matlab/2025b
         * export LD_LIBRARY_PATH=/apps/matlab/r2025b/bin/glnxa64:${LD_LIBRARY_PATH:-}
         * python -m pip install "matlabengine>=25.2,<25.3"
         * conda install --override-channels -c conda-forge numpy  # scipy pandas xarray netcdf4 h5netcdf matplotlib dask gsw
