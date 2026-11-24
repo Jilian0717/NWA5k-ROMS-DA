@@ -3,8 +3,20 @@ Tutorial: https://www.myroms.org/wiki/4DVar_Tutorial_Introduction
 
 ## 1. Observation file
 - create a python env that has matlab enginee
-    * on mac, I used miniforge3
-    * source ~/miniforge3/bin/activate matlab_engine
+    * on mac, I used miniforge3; then source ~/miniforge3/bin/activate matlab_engine
+    * on hydra, create a matlab_engine virtual environment:
+        * module purge
+        * module load ohpc
+        * module load matlab/2025b
+        * module load miniconda/25.9
+        * source /apps/miniconda/25.9/etc/profile.d/conda.sh
+        * conda create -p /user/jilian.xiong/.conda/envs/matlab_engine python=3.12 pip    --override-channels  -c conda-forge  -y
+        * conda activate /user/jilian.xiong/.conda/envs/matlab_engine
+        * module load matlab/2025b
+        * export LD_LIBRARY_PATH=/apps/matlab/r2025b/bin/glnxa64:${LD_LIBRARY_PATH:-}
+        * python -m pip install "matlabengine>=25.2,<25.3"
+        * conda install --override-channels -c conda-forge numpy  # scipy pandas xarray netcdf4 h5netcdf matplotlib dask gsw
+
 - `obs_depth` store the physical observation depth in meter (negative downward), while `obs_Zgrid` stores the fractional z grid. ROMS DA will [update](https://www.myroms.org/projects/src/ticket/895) obs_Zgrid internally. However, super_obs.m requires valid obs_Zgrid to vertically bin observations. Therefore, obs_Zgrid cannot be innitalized to zero if using super obs.
 - `obs_variance` is very likely not used in DA. I included it for completeness, following the WC13 example (wc13_obs.nc)
 - ROMS observation NetCDF files have length limitations on `obs_provenance` metadata. Exceeding these limits may cause DA runs to crash with unexpected errors, such as incorrect forcing-time interpolation.
