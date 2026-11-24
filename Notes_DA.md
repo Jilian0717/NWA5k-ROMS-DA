@@ -167,7 +167,7 @@ https://github.com/myroms/roms/wiki/ROMS-4DVAR-Data-Assimilation#background-erro
    - APARNAME = out_dir/rbl4dvar.in
 - rbl4dvar_blank.in
 
-   - STDnameI # only adjust initial condition
+   - STDnameI # only adjust initial condition, the stdname will be updated to different months
    - NRMnameM and NRMnameI # normalization file
 
 - run_blank.sh
